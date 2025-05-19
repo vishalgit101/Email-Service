@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: xEmailMicroService
+  profiles:
+    active: ${ACTIVE_PROFILE:dev}  
+
+  blogAppUrl: http://localhost:8080 #needed for the verification of token
+  
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB:emailmicro}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:pass123}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+#All this mail property config thingy can also be done in the java class
+# java mail implementation something like that its called
+  mail:
+    host: ${EMAIL_HOST}
+    port: ${EMAIL_PORT}
+    username: ${EMAIL_ID}
+    password: ${EMAIL_PASSWORD}
+    default-encoding: UTF-8
+    properties:
+      mail:
+        mime:
+          charset: UTF
+        smtp:
+          writetimeout: 20000
+          connectiontimeout: 20000
+          timeout: 20000
+          auth: true
+          starttls:
+            enable: true 
+            required: true
+  #Custom property verify... can put any thing it should get picked up
+  
+    verify:
+      host: ${VERIFY_EMAIL_HOST}
+#start-tls: transparent layer security
+server:
+  port: 8081
+
+    
+# but we'll define different types of environment
+# within our local configuration

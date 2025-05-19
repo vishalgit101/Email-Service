@@ -1,0 +1,20 @@
+#Database
+
+MySQL_USERNAME: root
+MySQL_PASSWORD: pass123
+MySQL_HOST: localhost
+MySQL_PORT: 3306 #sql port
+MySQL_DB: emailmicro
+
+#Server
+SERVER_PORT: 8081 # spring port
+ACTIVE_PROFILE: dev
+
+#Email Config or custom email configs
+EMAIL_HOST: smtp.gmail.com 
+EMAIL_PORT: 587 # PORT for gmail is 587
+EMAIL_ID: padishahemperor123@gmail.com
+EMAIL_PASSWORD: cgoi xzka jkld vrdc
+VERIFY_EMAIL_HOST: http://localhost:${SERVER_PORT} # localhost should be replaced with domain name in production
+
+ 

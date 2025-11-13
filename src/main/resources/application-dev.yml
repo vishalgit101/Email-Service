@@ -14,7 +14,7 @@ ACTIVE_PROFILE: dev
 EMAIL_HOST: smtp.gmail.com 
 EMAIL_PORT: 587 # PORT for gmail is 587
 EMAIL_ID: padishahemperor123@gmail.com
-EMAIL_PASSWORD: cgoi xzka jkld vrdc
+EMAIL_PASSWORD: pgli xzka jdld klc
 VERIFY_EMAIL_HOST: http://localhost:${SERVER_PORT} # localhost should be replaced with domain name in production
 
  

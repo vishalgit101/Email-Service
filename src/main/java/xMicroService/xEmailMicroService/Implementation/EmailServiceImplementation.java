@@ -129,6 +129,7 @@ public class EmailServiceImplementation implements EmailService {
 		
 		try {
 			// Thymeleaf context
+			// these context fields will be used in the Template file, as we can check
 			Context context = new Context();
 			context.setVariable("name", name);
 			context.setVariable("url", EmailUtils.getVerificationUrl(this.host, token));

@@ -128,6 +128,7 @@ public class EmailServiceImplementation implements EmailService {
 			// need to use context...Thymeleaf Standalone Engine (e.g. Emails, PDFs, Reports)
 		
 		try {
+			// Thymeleaf context
 			Context context = new Context();
 			context.setVariable("name", name);
 			context.setVariable("url", EmailUtils.getVerificationUrl(this.host, token));
